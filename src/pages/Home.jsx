@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/final_logo_big.png'
 import preview1 from '../assets/two-cents-preview-1.PNG'
 import preview2 from '../assets/two-cents-preview-2.PNG'
@@ -11,6 +11,51 @@ import preview8 from '../assets/two-cents-preview-8.PNG'
 import preview9 from '../assets/two-cents-preview-9.PNG'
 
 function Home() {
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "How do I create an account?",
+      answer: "Simply download the app and sign in with your Google or email account. It's quick, secure, and gets you started in seconds!"
+    },
+    {
+      question: "How do I change my password?",
+      answer: "On the sign-in page, click 'Forgot Password' and you'll receive an email with a link to securely update your password."
+    },
+    {
+      question: "Is my data private?",
+      answer: "Yes! Your data is stored in a secure backend, ensuring your opinions and personal information remain private and protected."
+    },
+    {
+      question: "Can I suggest new questions?",
+      answer: "Absolutely! Download the app and select the plus (+) icon to submit your own questions for the community."
+    },
+    {
+      question: "Can I add my friends?",
+      answer: "Yes! Search and add friends to see how your perspectives compare. View how society answers questions versus your friend group."
+    },
+    {
+      question: "How do I join organizations?",
+      answer: "Organizations are groups that see specific questions related to them—sports fans, occupations, schools, friend groups, or anything you can imagine. Email twocentsapp.team@gmail.com to start or join an organization."
+    },
+    {
+      question: "Is the app free?",
+      answer: "Yes, Two Cents is completely free to use!"
+    },
+    {
+      question: "Can I change my answers later?",
+      answer: "Yes, you can revisit and update your answers at any time. Your opinion can evolve as you learn more."
+    },
+    {
+      question: "How do I submit feedback?",
+      answer: "We'd love to hear from you! Email us at twocentsapp.team@gmail.com with any feedback, suggestions, or questions."
+    }
+  ];
+
   return (
     <div className="page-content">
       {/* Hero Section */}
@@ -22,57 +67,56 @@ function Home() {
             maxWidth: '500px', 
             width: '100%', 
             height: 'auto', 
+            marginBottom: '3rem'
           }} 
         />
-        <h2 style={{ 
-          fontSize: '2rem', 
-          color: 'var(--white)', 
-          marginBottom: '2.5rem',
-          fontWeight: '400',
-          letterSpacing: '0.5px'
-        }}>
-          Time to give your <span style={{ 
-            color: 'var(--gold)', 
-            fontWeight: '700',
-            fontSize: '2.2rem'
-          }}>'two cents'</span>
-        </h2>
         
-        {/* Value Proposition Bubble */}
-        <div className="hero-bubble">
-          <h3 style={{ 
-            fontSize: '1.8rem', 
-            color: 'var(--gold)', 
-            marginBottom: '1.5rem',
-            marginTop: '0'
-          }}>
-            About Us
-          </h3>
+        {/* Two Column Layout */}
+        <div className="hero-content">
+          {/* Left: Large Tagline */}
+          <div className="hero-tagline">
+            <h1>
+              Tired of biased feeds?{' '}
+              <span className="highlight-text">Time to give your two cents.</span>
+            </h1>
+          </div>
           
-          <div style={{ textAlign: 'left', maxWidth: '700px', margin: '0 auto' }}>
-            <div className="feature-point">
-              <span className="feature-icon">🗳️</span>
-              <p>An unbiased platform where every voice counts</p>
-            </div>
+          {/* Right: About Us Bubble */}
+          <div className="hero-bubble">
+            <h3 style={{ 
+              fontSize: '1.8rem', 
+              color: 'var(--gold)', 
+              marginBottom: '1.5rem',
+              marginTop: '0'
+            }}>
+              About Us
+            </h3>
             
-            <div className="feature-point">
-              <span className="feature-icon">🚫</span>
-              <p>Skip the algorithms of traditional social media</p>
-            </div>
-            
-            <div className="feature-point">
-              <span className="feature-icon">📊</span>
-              <p>See live results on topical questions</p>
-            </div>
-            
-            <div className="feature-point">
-              <span className="feature-icon">🤝</span>
-              <p>Join organizations you care about</p>
-            </div>
-            
-            <div className="feature-point">
-              <span className="feature-icon">🌍</span>
-              <p>Engage with issues in your city, country, or worldwide</p>
+            <div style={{ textAlign: 'left' }}>
+              <div className="feature-point">
+                <span className="feature-icon">🗳️</span>
+                <p>An unbiased platform where every voice counts</p>
+              </div>
+              
+              <div className="feature-point">
+                <span className="feature-icon">🚫</span>
+                <p>Skip the algorithms of traditional social media</p>
+              </div>
+              
+              <div className="feature-point">
+                <span className="feature-icon">📊</span>
+                <p>See live results on topical questions</p>
+              </div>
+              
+              <div className="feature-point">
+                <span className="feature-icon">🤝</span>
+                <p>Join organizations you care about</p>
+              </div>
+              
+              <div className="feature-point">
+                <span className="feature-icon">🌍</span>
+                <p>Engage with issues in your city, country, or worldwide</p>
+              </div>
             </div>
           </div>
         </div>
@@ -99,51 +143,40 @@ function Home() {
         </p>
       </section>
 
-      {/* Features Section */}
-      <section className="section">
-        <h2>Features</h2>
-        <div style={{ display: 'grid', gap: '1.5rem' }}>
-          <div className="faq-item">
-            <h3>📊 Multiple Choice Questions</h3>
-            <p>Answer quick polls on topics that matter to you and your community</p>
-          </div>
-          <div className="faq-item">
-            <h3>🌍 Local to Global</h3>
-            <p>Engage with issues at the city, country, and international level</p>
-          </div>
-          <div className="faq-item">
-            <h3>💬 Direct Democracy</h3>
-            <p>Your opinion counts - see real-time results from your community</p>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="section">
-        <h2>Frequently Asked Questions</h2>
-        <div className="faq-item">
-          <h3>How do I create an account?</h3>
-          <p>Download the app and sign up with your email address. You'll receive a verification email to confirm your account.</p>
-        </div>
-        <div className="faq-item">
-          <h3>Is my data private?</h3>
-          <p>Yes, we take privacy seriously. Your voting data is anonymized and secured.</p>
-        </div>
-        <div className="faq-item">
-          <h3>Can I suggest new questions?</h3>
-          <p>Yes! We're working on features that will allow users to propose and vote on new questions.</p>
-        </div>
-        <div className="faq-item">
-          <h3>Is the app free?</h3>
-          <p>Yes, Two Cents is completely free to use.</p>
+        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Frequently Asked Questions</h2>
+        <div className="faq-container">
+          {faqs.map((faq, index) => (
+            <div 
+              key={index} 
+              className={`faq-bubble ${openFaq === index ? 'open' : ''}`}
+              onClick={() => toggleFaq(index)}
+            >
+              <div className="faq-question">
+                <h3>{faq.question}</h3>
+                <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+              </div>
+              {openFaq === index && (
+                <div className="faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="section">
-        <h2>Contact Us</h2>
+      <section className="section" style={{ textAlign: 'center' }}>
+        <h2 style={{ textAlign: 'center' }}>Contact Us</h2>
         <p>Have questions or feedback? We'd love to hear from you!</p>
-        <p>Email: <a href="mailto:support@twocents.app">support@twocents.app</a></p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:twocentsapp.team@gmail.com">twocentsapp.team@gmail.com</a>
+        </p>
+        <p>
+          <strong>Reddit Community:</strong> <a href="https://reddit.com/r/twocentsapp" target="_blank" rel="noopener noreferrer">r/twocentsapp</a>
+        </p>
       </section>
 
       {/* Footer */}
