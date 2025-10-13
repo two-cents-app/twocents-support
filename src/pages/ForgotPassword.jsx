@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function ForgotPassword() {
   useEffect(() => {
@@ -42,6 +43,12 @@ function ForgotPassword() {
         >
           Open Two Cents App
         </button>
+
+        <div style={{ marginTop: '2rem' }}>
+          <Link to="/" style={{ color: 'var(--grey)', fontSize: '0.9rem' }}>
+            ← Back to Home
+          </Link>
+        </div>
       </div>
     </div>
   )

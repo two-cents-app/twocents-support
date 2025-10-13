@@ -3,40 +3,110 @@
   background-color: var(--black);
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  border-bottom: 1px solid var(--gold-dark);
-  background-color: var(--black);
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--gold);
-}
-
-.navbar-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.navbar-links a {
-  color: var(--white);
-  font-weight: 500;
-}
-
-.navbar-links a:hover {
-  color: var(--gold);
-}
-
 .page-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.hero-bubble {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: rgba(199, 174, 106, 0.08);
+  border: 2px solid var(--gold-dark);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(199, 174, 106, 0.15);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-bubble:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(199, 174, 106, 0.25);
+}
+
+.feature-point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.feature-point:last-child {
+  margin-bottom: 0;
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-point p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+.preview-gallery-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dark) rgba(255, 255, 255, 0.1);
+}
+
+.preview-gallery-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.preview-gallery-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.preview-gallery-container::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 4px;
+}
+
+.preview-gallery-container::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+.preview-gallery {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  width: max-content;
+}
+
+.preview-image-wrapper {
+  flex-shrink: 0;
+  border: 2px solid var(--gold-dark);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-image-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(199, 174, 106, 0.3);
+}
+
+.preview-image {
+  display: block;
+  height: 500px;
+  width: auto;
+  object-fit: contain;
 }
 
 .section {

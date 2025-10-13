@@ -1,27 +1,101 @@
 import React from 'react'
+import logo from '../assets/final_logo_big.png'
+import preview1 from '../assets/two-cents-preview-1.PNG'
+import preview2 from '../assets/two-cents-preview-2.PNG'
+import preview3 from '../assets/two-cents-preview-3.PNG'
+import preview4 from '../assets/two-cents-preview-4.PNG'
+import preview5 from '../assets/two-cents-preview-5.PNG'
+import preview6 from '../assets/two-cents-preview-6.PNG'
+import preview7 from '../assets/two-cents-preview-7.PNG'
+import preview8 from '../assets/two-cents-preview-8.PNG'
+import preview9 from '../assets/two-cents-preview-9.PNG'
 
 function Home() {
   return (
     <div className="page-content">
       {/* Hero Section */}
       <section className="section" style={{ textAlign: 'center', padding: '3rem 0' }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>Two Cents</h1>
-        <p style={{ fontSize: '1.3rem', color: 'var(--gold-light)' }}>
-          Give your two cents on what matters
-        </p>
-        <p style={{ color: 'var(--grey)', maxWidth: '700px', margin: '1rem auto' }}>
-          A social platform for direct democracy. Answer multiple choice questions about issues 
-          in your city, country, and across the world. Make your voice heard on important topics.
-        </p>
+        <img 
+          src={logo} 
+          alt="Two Cents Logo" 
+          style={{ 
+            maxWidth: '500px', 
+            width: '100%', 
+            height: 'auto', 
+          }} 
+        />
+        <h2 style={{ 
+          fontSize: '2rem', 
+          color: 'var(--white)', 
+          marginBottom: '2.5rem',
+          fontWeight: '400',
+          letterSpacing: '0.5px'
+        }}>
+          Time to give your <span style={{ 
+            color: 'var(--gold)', 
+            fontWeight: '700',
+            fontSize: '2.2rem'
+          }}>'two cents'</span>
+        </h2>
+        
+        {/* Value Proposition Bubble */}
+        <div className="hero-bubble">
+          <h3 style={{ 
+            fontSize: '1.8rem', 
+            color: 'var(--gold)', 
+            marginBottom: '1.5rem',
+            marginTop: '0'
+          }}>
+            About Us
+          </h3>
+          
+          <div style={{ textAlign: 'left', maxWidth: '700px', margin: '0 auto' }}>
+            <div className="feature-point">
+              <span className="feature-icon">🗳️</span>
+              <p>An unbiased platform where every voice counts</p>
+            </div>
+            
+            <div className="feature-point">
+              <span className="feature-icon">🚫</span>
+              <p>Skip the algorithms of traditional social media</p>
+            </div>
+            
+            <div className="feature-point">
+              <span className="feature-icon">📊</span>
+              <p>See live results on topical questions</p>
+            </div>
+            
+            <div className="feature-point">
+              <span className="feature-icon">🤝</span>
+              <p>Join organizations you care about</p>
+            </div>
+            
+            <div className="feature-point">
+              <span className="feature-icon">🌍</span>
+              <p>Engage with issues in your city, country, or worldwide</p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* About Section */}
+      {/* App Preview Gallery */}
       <section className="section">
-        <h2>About the App</h2>
-        <p>
-          Two Cents is a social media platform that brings direct democracy to your fingertips. 
-          Participate in polls and surveys about local and global issues, see how your community 
-          thinks, and make informed decisions together.
+        <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>See It In Action</h2>
+        <div className="preview-gallery-container">
+          <div className="preview-gallery">
+            {[preview1, preview2, preview3, preview4, preview5, preview6, preview7, preview8, preview9].map((preview, index) => (
+              <div key={index} className="preview-image-wrapper">
+                <img 
+                  src={preview} 
+                  alt={`Two Cents App Preview ${index + 1}`}
+                  className="preview-image"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        <p style={{ textAlign: 'center', color: 'var(--grey)', marginTop: '1rem', fontSize: '0.9rem' }}>
+          ← Scroll to see more →
         </p>
       </section>
 
