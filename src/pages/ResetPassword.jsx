@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-function ForgotPassword() {
+function ResetPassword() {
   useEffect(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     
@@ -47,4 +47,4 @@ function ForgotPassword() {
   )
 }
 
-export default ForgotPassword
+export default ResetPassword
