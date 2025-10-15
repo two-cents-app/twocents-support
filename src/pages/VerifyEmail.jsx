@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 function VerifyEmail() {
-  useEffect(() => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  // useEffect(() => {
+  //   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     
-    if (isMobile) {
-      window.location.href = 'two-cents://verifyEmail'
-    }
-  }, [])
+  //   if (isMobile) {
+  //     window.location.href = 'two-cents://verifyEmail'
+  //   }
+  // }, [])
   
   return (
     <div className="redirect-message">
@@ -25,12 +25,12 @@ function VerifyEmail() {
           </p>
         </div>
 
-        <button 
+        {/* <button 
           className="redirect-button"
           onClick={() => window.location.href = 'two-cents://verifyEmail'}
         >
           Open Two Cents App
-        </button>
+        </button> */}
 
         <div style={{ marginTop: '2rem' }}>
           <Link to="/" style={{ color: 'var(--grey)', fontSize: '0.9rem' }}>
