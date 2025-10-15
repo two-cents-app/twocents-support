@@ -19,10 +19,10 @@ function VerifyEmail() {
         
         <div style={{ marginTop: '2rem' }}>
           <p>Please return to the Two Cents app to continue.</p>
-          <p style={{ fontSize: '0.9rem', marginTop: '1rem' }}>
+          {/* <p style={{ fontSize: '0.9rem', marginTop: '1rem' }}>
             If you're on mobile and the app didn't open automatically, 
             please click the link in your email while on your mobile device.
-          </p>
+          </p> */}
         </div>
 
         {/* <button 
