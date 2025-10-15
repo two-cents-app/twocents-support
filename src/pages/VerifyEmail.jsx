@@ -3,25 +3,13 @@ import { Link } from 'react-router-dom'
 
 function VerifyEmail() {
   useEffect(() => {
-    // Get the URL parameters
-    const params = new URLSearchParams(window.location.search)
-    
-    // Check if we're on mobile and can open the app
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     
     if (isMobile) {
-      // Attempt to open the app with a deep link
-      // Format: twocents://verifyEmail?token=...
-      const token = params.get('token') || ''
-      const deepLink = `twocents://verifyEmail?token=${token}`
-      
-      // Try to open the app
-      window.location.href = deepLink
-      
-      // If the app doesn't open after 2 seconds, the message will remain visible
+      window.location.href = 'twocents://verifyEmail'
     }
   }, [])
-
+  
   return (
     <div className="redirect-message">
       <h1>Email Verification</h1>

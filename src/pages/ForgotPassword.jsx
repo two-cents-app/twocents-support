@@ -3,22 +3,15 @@ import { Link } from 'react-router-dom'
 
 function ForgotPassword() {
   useEffect(() => {
-    // Get the URL parameters
-    const params = new URLSearchParams(window.location.search)
-    
-    // Check if we're on mobile and can open the app
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     
     if (isMobile) {
-      // Attempt to open the app with a deep link
-      // Format: twocents://forgotPassword?token=...
-      const token = params.get('token') || ''
-      const deepLink = `twocents://forgotPassword?token=${token}`
+      const hash = window.location.hash
+      const search = window.location.search
       
-      // Try to open the app
+      const deepLink = `twocents://resetPassword${search}${hash}`
+      
       window.location.href = deepLink
-      
-      // If the app doesn't open after 2 seconds, the message will remain visible
     }
   }, [])
 
@@ -39,7 +32,7 @@ function ForgotPassword() {
 
         <button 
           className="redirect-button"
-          onClick={() => window.location.href = 'twocents://forgotPassword'}
+          onClick={() => window.location.href = 'twocents://resetPassword'}
         >
           Open Two Cents App
         </button>
