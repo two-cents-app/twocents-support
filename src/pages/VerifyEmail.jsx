@@ -6,7 +6,7 @@ function VerifyEmail() {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     
     if (isMobile) {
-      window.location.href = 'twocents://verifyEmail'
+      window.location.href = 'two-cents://verifyEmail'
     }
   }, [])
   
@@ -27,7 +27,7 @@ function VerifyEmail() {
 
         <button 
           className="redirect-button"
-          onClick={() => window.location.href = 'twocents://verifyEmail'}
+          onClick={() => window.location.href = 'two-cents://verifyEmail'}
         >
           Open Two Cents App
         </button>

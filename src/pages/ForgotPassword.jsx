@@ -9,7 +9,7 @@ function ForgotPassword() {
       const hash = window.location.hash
       const search = window.location.search
       
-      const deepLink = `twocents://resetPassword${search}${hash}`
+      const deepLink = `two-cents://resetPassword${search}${hash}`
       
       window.location.href = deepLink
     }
@@ -32,7 +32,7 @@ function ForgotPassword() {
 
         <button 
           className="redirect-button"
-          onClick={() => window.location.href = 'twocents://resetPassword'}
+          onClick={() => window.location.href = 'two-cents://resetPassword'}
         >
           Open Two Cents App
         </button>
