@@ -2,18 +2,18 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 function ResetPassword() {
-  useEffect(() => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  // useEffect(() => {
+  //   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     
-    if (isMobile) {
-      const hash = window.location.hash
-      const search = window.location.search
+  //   if (isMobile) {
+  //     const hash = window.location.hash
+  //     const search = window.location.search
       
-      const deepLink = `two-cents://resetPassword${search}${hash}`
+  //     const deepLink = `two-cents://resetPassword${search}${hash}`
       
-      window.location.href = deepLink
-    }
-  }, [])
+  //     window.location.href = deepLink
+  //   }
+  // }, [])
 
   return (
     <div className="redirect-message">
@@ -24,10 +24,10 @@ function ResetPassword() {
         
         <div style={{ marginTop: '2rem' }}>
           <p>Please open the Two Cents app on your mobile device to continue.</p>
-          <p style={{ fontSize: '0.9rem', marginTop: '1rem' }}>
+          {/* <p style={{ fontSize: '0.9rem', marginTop: '1rem' }}>
             If you're on desktop, please click the password reset link from your email 
             while on your mobile device.
-          </p>
+          </p> */}
         </div>
 
         <button 
