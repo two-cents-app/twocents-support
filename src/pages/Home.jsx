@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/final_logo_big.png'
 import preview1 from '../assets/two-cents-preview-1.PNG'
 import preview2 from '../assets/two-cents-preview-2.PNG'
@@ -182,7 +183,7 @@ function Home() {
       {/* Footer */}
       <footer style={{ textAlign: 'center', padding: '2rem 0', marginTop: '3rem', borderTop: '1px solid var(--gold-dark)' }}>
         <p style={{ color: 'var(--grey)', marginBottom: '0.5rem' }}>
-          <a href="/twocents-support/privacy" style={{ color: 'var(--grey)', textDecoration: 'none', marginRight: '1rem' }}>Privacy Policy</a>
+          <Link to="/privacy" style={{ color: 'var(--grey)', textDecoration: 'none', marginRight: '1rem' }}>Privacy Policy</Link>
         </p>
         <p style={{ color: 'var(--grey)' }}>© 2025 Two Cents. All rights reserved.</p>
       </footer>
