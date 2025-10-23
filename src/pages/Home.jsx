@@ -181,6 +181,9 @@ function Home() {
 
       {/* Footer */}
       <footer style={{ textAlign: 'center', padding: '2rem 0', marginTop: '3rem', borderTop: '1px solid var(--gold-dark)' }}>
+        <p style={{ color: 'var(--grey)', marginBottom: '0.5rem' }}>
+          <a href="/twocents-support/privacy" style={{ color: 'var(--grey)', textDecoration: 'none', marginRight: '1rem' }}>Privacy Policy</a>
+        </p>
         <p style={{ color: 'var(--grey)' }}>© 2025 Two Cents. All rights reserved.</p>
       </footer>
     </div>

@@ -270,3 +270,74 @@
   font-size: 1.1rem;
   padding: 1rem 2rem;
 }
+
+.privacy-policy-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.privacy-policy-container h1 {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.privacy-policy-container h2 {
+  font-size: 1.8rem;
+  color: var(--gold-light);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gold-dark);
+}
+
+.privacy-policy-container h3 {
+  font-size: 1.3rem;
+  color: var(--gold-light);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.privacy-policy-container p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.privacy-policy-container ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.privacy-policy-container li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.privacy-policy-container a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.privacy-policy-container a:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+.policy-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: rgba(199, 174, 106, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(199, 174, 106, 0.15);
+}
+
+.policy-section:hover {
+  background-color: rgba(199, 174, 106, 0.08);
+  transition: background-color 0.3s ease;
+}
+

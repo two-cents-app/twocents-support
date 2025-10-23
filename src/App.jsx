@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import VerifyEmail from './pages/VerifyEmail'
 import ResetPassword from './pages/ResetPassword'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/verifyEmail" element={<VerifyEmail />} />
           <Route path="/resetPassword" element={<ResetPassword />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
     </Router>
